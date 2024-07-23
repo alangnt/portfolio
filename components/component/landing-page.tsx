@@ -100,7 +100,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Hi, I'm Alan Geirnaert</h1>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Hi, I&apos;m Alan Geirnaert</h1>
               <p className="text-lg text-muted-foreground">
                 Software Engineer, Data Scientist, and Astronomy Enthusiast
               </p>
