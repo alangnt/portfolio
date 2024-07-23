@@ -3,6 +3,8 @@ import { Manrope } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react"
+
 export const metadata: Metadata = {
   title: "Alan Geirnaert | Home",
   description: "Explore a curated collection of my finest work, showcasing my skills, creativity, and passion for excellence. From innovative projects to professional achievements, dive into my journey and see what I can bring to the table. Whether you're here to collaborate, get inspired, or simply admire, I hope you enjoy navigating through my portfolio as much as I enjoyed creating it.",
@@ -35,6 +37,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
