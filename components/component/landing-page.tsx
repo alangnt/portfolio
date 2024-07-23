@@ -434,7 +434,13 @@ export default function LandingPage() {
                   target="_blank"
                   prefetch={false}
                 >
-                  <Icons.XIcon className="h-6 w-6 text-primary" />
+                  <Image
+                    src="/xicon.png"
+                    height={24}
+                    width={24}
+                    alt="x icon"
+                    className="h-6 w-6 text-primary"
+                  />
                   <span className="border-transparent border-b-2 hover:border-opacity-100 hover:border-b-white">gnt_alan</span>
                 </Link>
               </div>
