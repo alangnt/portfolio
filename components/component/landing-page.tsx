@@ -1,7 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 
 import * as Icons from "@/components/ui/icons"
+
+import React, { useState, ChangeEvent, FormEvent } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
@@ -11,6 +15,45 @@ import { Textarea } from "@/components/ui/textarea"
 import { Fascinate } from "next/font/google"
 
 export default function LandingPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+
+      // Reset the form
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      alert('Form submitted successfully');
+
+    } else {
+      alert('Failed to submit the form');
+    }
+  };
+
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
@@ -320,20 +363,32 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <Input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Name"
                   className="w-full rounded-lg bg-background px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  required
                 />
                 <Input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email"
                   className="w-full rounded-lg bg-background px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  required
                 />
                 <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Message"
                   className="w-full rounded-lg bg-background px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  required
                 />
                 <Button type="submit" className="w-full">
                   Send Message
