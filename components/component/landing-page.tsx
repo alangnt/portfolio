@@ -255,7 +255,7 @@ export default function LandingPage() {
                 <li className="flex items-start gap-2">
                   <Icons.CheckIcon className="h-5 w-5 text-primary" />
                   <span>
-                    Participate to a 7-weeks long Internship starting on 22nd July to 7th September 2024 with a lot of Team work.
+                    I got the wonderful chance to participate to a 7-weeks long Internship starting on 22nd July to 7th September 2024 with a lot of Team work.
                   </span>
                 </li>
 
