@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -55,12 +55,12 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          'from': { 'height': '0' },
-          'to': { 'height': "var(--radix-accordion-content-height)" }
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" }
         },
         "accordion-up": {
-          'from': { 'height': "var(--radix-accordion-content-height)" },
-          'to': { 'height': '0' }
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 }
         }
       },
       animation: {
@@ -71,4 +71,3 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 };
-export default config;
