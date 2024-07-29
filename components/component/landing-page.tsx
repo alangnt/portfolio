@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 import * as Icons from "@/components/ui/icons"
+import { Book } from "lucide-react"
 
 import React, { useState } from "react"
 
@@ -170,6 +171,17 @@ export default function LandingPage() {
                   <Button variant="outline">
                     <Icons.LinkedinIcon className="mr-2 h-5 w-5" />
                     LinkedIn
+                  </Button>
+                </Link>
+
+                <Link
+                  href="/resume/cv_Alan_en.pdf"
+                  target="_blank"
+                  prefetch={false}
+                >
+                  <Button variant="outline">
+                    <Book className="mr-2 h-5 w-5" />
+                    Resume
                   </Button>
                 </Link>
 
