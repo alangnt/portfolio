@@ -244,6 +244,86 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section id="projects" className="container mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+
+            <Link
+              href="https://weather-app-six-self-61.vercel.app/"
+              className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105"
+              target="_blank"
+              prefetch={false}
+            >
+              <Image
+                src="/weather-app.png"
+                width={400}
+                height={225}
+                alt="Project 1"
+                className="h-[225px] w-full rounded-lg object-cover"
+              />
+              <h3 className="mt-4 text-lg font-medium">Global Weather App</h3>
+              <p className="mt-2 text-muted-foreground">
+                A weather app that provides real-time weather updates for any city around the globe. This project is part of Headstarter AI internship&apos;s week 1 Hackathon.
+              </p>
+              <div className="mt-4 flex gap-2">
+                <Badge>Next.js</Badge>
+                <Badge>TypeScript</Badge>
+                <Badge>Full-Stack</Badge>
+                <Badge>PostgreSQL</Badge>
+              </div>
+            </Link>
+
+            <Link
+              href="https://projectlotus.online/"
+              className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105"
+              target="_blank"
+              prefetch={false}
+            >
+              <Image
+                src="/projectlotus.png"
+                width={400}
+                height={225}
+                alt="Project 1"
+                className="h-[225px] w-full rounded-lg object-cover"
+              />
+              <h3 className="mt-4 text-lg font-medium">Project Lotus</h3>
+              <p className="mt-2 text-muted-foreground">
+                It is a relaxing platform designed for studying with the Pomodoro Method. Enhance your focus and productivity with soothing backgrounds and a built-in 25-minute timer.
+              </p>
+              <div className="mt-4 flex gap-2">
+                <Badge>Next.js</Badge>
+                <Badge>TypeScript</Badge>
+                <Badge>Full-Stack</Badge>
+              </div>
+            </Link>
+
+            <Link
+              href="https://2024-summer-hackathon.vercel.app/"
+              className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105"
+              target="_blank"
+              prefetch={false}
+            >
+              <Image
+                src="/datadruids.png"
+                width={400}
+                height={225}
+                alt="Project 2"
+                className="h-[225px] w-full rounded-lg object-cover"
+              />
+              <h3 className="mt-4 text-lg font-medium">Olympic Sages</h3>
+              <p className="mt-2 text-muted-foreground">
+                We analyzed historical data, visualized our results, and hypothesized how this data could be used to predict the outcomes of the 2024 Olympics and its winners.
+              </p>
+              <div className="mt-4 flex gap-2">
+                <Badge>Scikit</Badge>
+                <Badge>Pandas</Badge>
+                <Badge>Plotly</Badge>
+              </div>
+            </Link>
+
+          </div>
+        </section>
+
         <section id="experience" className="container mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -301,60 +381,6 @@ export default function LandingPage() {
                 </li>
               </ul>
             </div>
-
-          </div>
-        </section>
-        <section id="projects" className="container mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-
-            <Link
-              href="https://projectlotus.online/"
-              className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105"
-              target="_blank"
-              prefetch={false}
-            >
-              <Image
-                src="/projectlotus.png"
-                width={400}
-                height={225}
-                alt="Project 1"
-                className="h-[225px] w-full rounded-lg object-cover"
-              />
-              <h3 className="mt-4 text-lg font-medium">Project Lotus</h3>
-              <p className="mt-2 text-muted-foreground">
-                It is a relaxing platform designed for studying with the Pomodoro Method. Enhance your focus and productivity with soothing backgrounds and a built-in 25-minute timer.
-              </p>
-              <div className="mt-4 flex gap-2">
-                <Badge>Next.js</Badge>
-                <Badge>TypeScript</Badge>
-                <Badge>Full-Stack</Badge>
-              </div>
-            </Link>
-
-            <Link
-              href="https://2024-summer-hackathon.vercel.app/"
-              className="rounded-lg bg-muted p-6 transition-all duration-300 hover:scale-105"
-              target="_blank"
-              prefetch={false}
-            >
-              <Image
-                src="/datadruids.png"
-                width={400}
-                height={225}
-                alt="Project 2"
-                className="h-[225px] w-full rounded-lg object-cover"
-              />
-              <h3 className="mt-4 text-lg font-medium">Olympic Sages</h3>
-              <p className="mt-2 text-muted-foreground">
-                We analyzed historical data, visualized our results, and hypothesized how this data could be used to predict the outcomes of the 2024 Olympics and its winners.
-              </p>
-              <div className="mt-4 flex gap-2">
-                <Badge>Scikit</Badge>
-                <Badge>Pandas</Badge>
-                <Badge>Plotly</Badge>
-              </div>
-            </Link>
 
           </div>
         </section>
