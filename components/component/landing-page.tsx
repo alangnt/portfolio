@@ -26,6 +26,7 @@ const translations = {
     hi: "Hi, I'm Alan Geirnaert",
     role: "Software Engineer, Data Scientist, and Astronomy Enthusiast",
     resume: "Resume",
+    hire: "Open to work",
     aboutMe: "About Me",
     aboutText1: "I am a passionate Software Engineer, Data Scientist, and Astronomy enthusiast. With a strong background in computer science and a deep fascination for the cosmos, I strive to create innovative solutions that push the boundaries of technology and explore the wonders of the universe.",
     aboutText2: "In my work, I combine my technical expertise with a creative mindset, always seeking to find new and efficient ways to tackle complex problems. I am driven by a desire to learn, grow, and contribute to the advancement of technology and scientific understanding.",
@@ -64,6 +65,7 @@ const translations = {
     hi: "Bonjour, je suis Alan Geirnaert",
     role: "Ingénieur Logiciel, Data Scientist et Passionné d'Astronomie",
     resume: "CV",
+    hire: "Ouvert à l'emploi",
     aboutMe: "À propos de moi",
     aboutText1: "Je suis un ingénieur logiciel passionné, data scientist et amateur d'astronomie. Avec une solide formation en informatique et une profonde fascination pour le cosmos, je m'efforce de créer des solutions innovantes qui repoussent les limites de la technologie et explorent les merveilles de l'univers.",
     aboutText2: "Dans mon travail, je combine mon expertise technique avec un esprit créatif, cherchant toujours à trouver de nouvelles façons efficaces d'aborder des problèmes complexes. Je suis motivé par le désir d'apprendre, de grandir et de contribuer à l'avancement de la technologie et de la compréhension scientifique.",
@@ -272,6 +274,10 @@ export default function LandingPage() {
                     {t('resume')}
                   </Button>
                 </Link>
+              </div>
+
+              <div>
+                <Badge>{t('hire')}</Badge>
               </div>
             </div>
             <div className="relative">
