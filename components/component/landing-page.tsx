@@ -26,6 +26,7 @@ const translations = {
     hi: "Hi, I'm Alan Geirnaert",
     role: "Software Engineer, Data Scientist, and Astronomy Enthusiast",
     resume: "Resume",
+    resume_file: "/resume/cv_Alan_en.pdf",
     hire: "Open to work",
     aboutMe: "About Me",
     aboutText1: "I am a passionate Software Engineer, Data Scientist, and Astronomy enthusiast. With a strong background in computer science and a deep fascination for the cosmos, I strive to create innovative solutions that push the boundaries of technology and explore the wonders of the universe.",
@@ -65,6 +66,7 @@ const translations = {
     hi: "Bonjour, je suis Alan Geirnaert",
     role: "Ingénieur Logiciel, Data Scientist et Passionné d'Astronomie",
     resume: "CV",
+    resume_file: "/resume/cv_Alan_fr.pdf",
     hire: "Ouvert à l'emploi",
     aboutMe: "À propos de moi",
     aboutText1: "Je suis un ingénieur logiciel passionné, data scientist et amateur d'astronomie. Avec une solide formation en informatique et une profonde fascination pour le cosmos, je m'efforce de créer des solutions innovantes qui repoussent les limites de la technologie et explorent les merveilles de l'univers.",
@@ -265,7 +267,7 @@ export default function LandingPage() {
                   </Button>
                 </Link>
                 <Link
-                  href="/resume/cv_Alan_en.pdf"
+                  href={t('resume_file')}
                   target="_blank"
                   prefetch={false}
                 >
